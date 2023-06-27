@@ -1,0 +1,54 @@
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:200px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+  </div>
+  <div class="w3-container">
+    <h5>Módulos</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="https://091402shdwq01.dwq.infonavit.net:4320/XS_PLTF_INFT/SPK_PLTF_INFT/appHome/index.html" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home"></i>  Home</a>
+    <a ui-sref="login" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"><img class="img-responsive" src="../assets/img/TED.png" alt="TED" style="max-width: 24px;" align="left">  Login</a>
+    <a ui-sref="app" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"><img class="img-responsive" src="../assets/img/TED.png" alt="TED" style="max-width: 24px;" align="left">  App</a>
+    <a ui-sref="app.area({action: 'create'})" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"><img class="img-responsive" src="../assets/img/ii.png" alt="II" style="max-width: 24px;" align="left"> Area</a>
+    <a ui-sref="app.areas" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"><img class="img-responsive" src="../assets/img/isc.png" alt="ISC" style="max-width: 24px;" align="left"> Areas</a>
+    <a ui-sref="app.empresas" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"> Empresas</a>
+    <a ui-sref="app.empresa({action: 'list'})" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"> Consulta Empresa</a>
+    <a ui-sref="app.empresa({action: 'create'})" ui-sref-active="w3-blue" class="w3-bar-item w3-button w3-padding"> Empresa</a>
+    <!--
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  II</a>
+    <a href="/ii" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Historico</a><br><br>
+	  -->
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+

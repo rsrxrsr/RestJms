@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>AppEntity</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Angular Framework 
+	<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+	-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.7/angular-ui-router.min.js"></script>
+
+    <!-- App -->
+    <script src="app.js"></script>
+    <script src="controller/mainController.js"></script>
+    <script src="controller/listController.js"></script>
+    <script src="controller/formController.js"></script>
+
+	<script src="components/app/app.comp.js"></script>
+    <script src="components/areas.comp.js"></script>
+    <script src="components/area.comp.js"></script>
+    <script src="components/empresas.comp.js"></script>
+    <script src="components/empresa.comp.js"></script>
+
+    <script src="services/entityService.js"></script>
+    <script src="services/mockupService.js"></script>
+    <script src="services/restService.js"></script>
+    <script src="services/generalService.js"></script>
+    <script src="services/detail/empresaService.js"></script>
+</header>
+
+<body ng-app="App" ng-cloack>
+
+    <ui-view></ui-view>
+
+</body>
+
+</html>

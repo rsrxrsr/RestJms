@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: RSR
+Build-Jdk: 17.0.7
+Implementation-Title: demo
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.rsr
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/webapi
+Created-By: Maven Integration for Eclipse
+

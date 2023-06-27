@@ -1,0 +1,25 @@
+<section class="container">
+  	<h3>View: {{$ctrl.view}}</h3>
+  	<button type="button" ui-sref="app.empresa({action: 'create'})" > AddNew + </button>
+	<table idTable="idAreas" class="areas">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Empresa</th>
+				<th>Grupo</th>
+			</tr>
+		</thead>
+		<tbody style="font-family: sans-serif; font-size: 12px">
+			<tr ng-repeat="entity in $ctrl.model.catalog[$ctrl.view] ">
+				<td>{{ entity["id"] }}</td>
+				<td style="text-align: center">{{ entity["empresa"] }}</td>
+				<td style="text-align: center">{{ entity["grupo"] }}</td>
+				<td>
+                	<button type="button" ng-click="$ctrl.selectRow(entity)">Editar</button>
+                	<button type="button" ng-click="$ctrl.delete(entity)">Borrar</button>
+            	</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+

@@ -1,0 +1,54 @@
+<div>
+<div>View Name: {{$ctrl.view}} Show: {{$ctrl.isUpdate}}</div>
+	<p style="color:orange;"><b>{{$ctrl.visor}}</b></p>
+	<p ng-repeat="error in $ctrl.model.errs" style="color:orange;" >
+	   {{$index+1}}.- <b> {{error}}</b></p>
+	<ul class="nav justify-content-end">
+	  <li class="nav-item" ng-show="$ctrl.action==='update'">
+        <button class="btn btn-info" ng-click="$ctrl.subscribe()" >
+            <span class="fa fa-view">&nbsp;&nbsp;Subscribirse</span>
+        </button>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+	  </li>
+	  <li class="nav-item" ng-show="$ctrl.action==='list'">
+        <button class="btn btn-info" ng-click="$ctrl.list()" >
+            <span class="fa fa-view">&nbsp;&nbsp;Consultar</span>
+        </button>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+	  </li>
+	  <li class="nav-item"  ng-show="$ctrl.action==='create'">
+	      <button class="btn btn-success" ng-click="$ctrl.new()" >
+	      	<span class="fa fa-plus">&nbsp;&nbsp;Agregar</span>
+	      </button>
+	       &nbsp;&nbsp;&nbsp;&nbsp;
+	  </li>
+	  <li class="nav-item" ng-show="$ctrl.action==='update'">
+        <button class="btn btn-success" ng-click="$ctrl.save()" >
+            <span class="fa fa-pencil">&nbsp;&nbsp;Guardar</span>
+        </button>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+	  </li>
+	  <li class="nav-item"  ng-show="$ctrl.action==='update'">
+        <button class="btn btn-warning" ng-click="$ctrl.delete()" >
+            <span class="fa fa-times">&nbsp;&nbsp;Borrar</span>
+        </button>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+	  </li>
+	  <li class="nav-item" ng-show="false">
+        <button class="btn btn-info" ng-click="model.readExcel(model.file)" >
+            <span class="fa fa-eye">&nbsp;&nbsp;Revisar</span>
+        </button>
+         &nbsp;&nbsp;&nbsp;&nbsp;
+	  </li>
+	  <li class="nav-item" ng-show="false">
+        <button class="btn" ng-click="model.entity={}" >
+            <span class="fa fa-times">&nbsp;&nbsp;Limpiar</span>
+        </button>
+	  </li>
+	  <li class="nav-item" ng-show="true">
+	  	<button class="btn" ng-click="$ctrl.back();">
+	    	<span class="fa fa-close">&nbsp;&nbsp;Cerrar</span>
+	    </button>
+	  </li>
+	</ul>
+</div>

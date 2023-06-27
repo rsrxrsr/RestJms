@@ -1,0 +1,3 @@
+rest\Application.class
+rest\entity\Empresa.class
+rest\repository\EmpresaRepository.class
